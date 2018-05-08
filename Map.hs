@@ -1,23 +1,17 @@
 module Map where
 
-<<<<<<< HEAD
 import Data.List
 
-=======
->>>>>>> b6d45f38d21a4c4b65c6f9a214e6de9d7c47e1a9
 data Room = Room { number :: Int, conn :: [Int] }
 
 type Map = [Room]
 
-<<<<<<< HEAD
 adjacentRooms :: Int -> Map -> [Int]
 adjacentRooms x m = conn $ m !! (x-1)
 
 adjacentRoomsNotPrevious :: Int -> Int -> Map -> [Int]
 adjacentRoomsNotPrevious prev curr m = delete prev $ adjacentRooms curr m
 
-=======
->>>>>>> b6d45f38d21a4c4b65c6f9a214e6de9d7c47e1a9
 createMap :: Map -> Map
 createMap [] = [Room 1 [5,8,2]]
   ++ [Room 2 [1,10,3]]

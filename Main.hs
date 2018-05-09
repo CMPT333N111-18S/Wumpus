@@ -11,7 +11,8 @@ import System.IO.Unsafe
 main :: IO()
 main = do
   putStrLn "Welcome to Hunt the Wumpus!"
-  let m = createMap []
+  let c = createMap (Map [] [] [])
+  let m = generateMap c
   let p = Player 1 5 3
   let rand = unsafePerformIO (getStdRandom (randomR (2, 20)))
   let w = Wumpus rand $ adjacentRooms rand m !! 0

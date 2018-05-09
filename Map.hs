@@ -1,19 +1,20 @@
 module Map where
 
 import Data.List
+import System.Random
+import System.IO.Unsafe
 
 data Room = Room { number :: Int, conn :: [Int] }
-
-type Map = [Room]
-
+data Map = Map { rooms :: [Room], pits :: [Int], bats :: [Int] }
+  
 adjacentRooms :: Int -> Map -> [Int]
-adjacentRooms x m = conn $ m !! (x-1)
+adjacentRooms x m = conn $ (rooms m) !! (x-1)
 
 adjacentRoomsNotPrevious :: Int -> Int -> Map -> [Int]
 adjacentRoomsNotPrevious prev curr m = delete prev $ adjacentRooms curr m
 
 createMap :: Map -> Map
-createMap [] = [Room 1 [5,8,2]]
+createMap m = Map ([Room 1 [5,8,2]]
   ++ [Room 2 [1,10,3]]
   ++ [Room 3 [4,12,2]]
   ++ [Room 4 [14,3,5]]
@@ -32,4 +33,15 @@ createMap [] = [Room 1 [5,8,2]]
   ++ [Room 17 [16,18,7]]
   ++ [Room 18 [9,19,17]]
   ++ [Room 19 [18,20,11]]
-  ++ [Room 20 [16,19,13]]
+  ++ [Room 20 [16,19,13]]) [] []
+  
+generateMap :: Map -> Map
+generateMap m = do 
+  let r = (rooms m)
+  let rand1 = unsafePerformIO (getStdRandom (randomR (1, 7)))
+  let rand2 = unsafePerformIO (getStdRandom (randomR (8, 14)))
+  let rand3 = unsafePerformIO (getStdRandom (randomR (15, 20)))
+  let rand4 = unsafePerformIO (getStdRandom (randomR (1, 7)))
+  let rand5 = unsafePerformIO (getStdRandom (randomR (8, 14)))
+  let rand6 = unsafePerformIO (getStdRandom (randomR (15, 20)))
+  Map r [rand1,rand2,rand3] [rand4,rand5,rand6]

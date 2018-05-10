@@ -37,10 +37,10 @@ createMap m = Map ([Room 1 [5,8,2]]
 
 generatePitsAndBats :: [Int] -> [[Int]]
 generatePitsAndBats [] = do
-  let rand1 = unsafePerformIO (getStdRandom (randomR (1, 7)))
+  let rand1 = unsafePerformIO (getStdRandom (randomR (2, 7)))
   let rand2 = unsafePerformIO (getStdRandom (randomR (8, 14)))
   let rand3 = unsafePerformIO (getStdRandom (randomR (15, 20)))
-  let rand4 = unsafePerformIO (getStdRandom (randomR (1, 7)))
+  let rand4 = unsafePerformIO (getStdRandom (randomR (2, 7)))
   let rand5 = unsafePerformIO (getStdRandom (randomR (8, 14)))
   let rand6 = unsafePerformIO (getStdRandom (randomR (15, 20)))
   if (rand1 == rand4 || rand2 == rand5 || rand3 == rand6)

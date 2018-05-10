@@ -29,7 +29,8 @@ main = do
   putStrLn ""
   putStrLn "Press Enter to begin"
   let c = createMap (Map [] [] [])
-  let m = generateMap c
+  let x = generatePitsAndBats []
+  let m = generateMap x c
   let p = Player 1 5 3
   let rand = unsafePerformIO (getStdRandom (randomR (2, 20)))
   let w = Wumpus rand $ adjacentRooms rand m !! 0
@@ -41,7 +42,7 @@ main = do
 
 game :: Bool -> Player -> Map -> Wumpus -> IO()
 game t p m w = do
-  system "clear"
+  system "cls"
   if checkForLoss p w m == 2
     then putStrLn "The Player ran out of arrows and has nothing to defend themself with! Wumpus wins."
   else if checkForLoss p w m == 3

@@ -34,9 +34,6 @@ main = do
   let p = Player 1 5 3
   let rand = unsafePerformIO (getStdRandom (randomR (2, 20)))
   let w = Wumpus rand $ adjacentRooms rand m !! 0
-  putStrLn ("Wumpus is in room " ++ show (wLoc w))
-  putStrLn ("Bat locations: " ++ show (bats m))
-  putStrLn ("Pit locations: " ++ show (pits m))
   getLine
   game True p m w
 

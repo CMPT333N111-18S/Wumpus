@@ -2,9 +2,9 @@ name:                Wumpus
 version:             0.1.0.0
 github:              "githubuser/Wumpus"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
+author:              "Brendan Van Allen & Kyle Burns"
+maintainer:          "brendan.vanallen1@marist.edu"
+copyright:           "2018 Brendan Van Allen"
 
 extra-source-files:
 - README.md

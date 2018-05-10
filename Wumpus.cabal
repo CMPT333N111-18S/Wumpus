@@ -2,16 +2,16 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 91d018c94723b3ec51a41f96ae7097c508cf3bc69b4ab946b254fdd5e5095841
+-- hash: 896b8fe448d2ea9da1343cf4d5f12c661ef3bd0e9ea988e991dfa90c07018a48
 
 name:           Wumpus
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/Wumpus#readme>
 homepage:       https://github.com/githubuser/Wumpus#readme
 bug-reports:    https://github.com/githubuser/Wumpus/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2018 Author name here
+author:         Brendan Van Allen & Kyle Burns
+maintainer:     brendan.vanallen1@marist.edu
+copyright:      2018 Brendan Van Allen
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple

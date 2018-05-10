@@ -28,9 +28,7 @@ main = do
   putStrLn "-Be smart when shooting, you only have 3 arrows"
   putStrLn ""
   putStrLn "Press Enter to begin"
-  let c = createMap (Map [] [] [])
-  let x = generatePitsAndBats []
-  let m = generateMap x c
+  let m = generatePitsAndBats $ createMap (Map [] [] [])
   let p = Player 1 5 3
   let rand = unsafePerformIO (getStdRandom (randomR (2, 20)))
   let w = Wumpus rand $ adjacentRooms rand m !! 0
@@ -39,7 +37,7 @@ main = do
 
 game :: Bool -> Player -> Map -> Wumpus -> IO()
 game t p m w = do
-  system "cls"
+  system "clear"
   if checkForLoss p w m == 2
     then putStrLn "The Player ran out of arrows and has nothing to defend themself with! Wumpus wins."
   else if checkForLoss p w m == 3
@@ -47,32 +45,32 @@ game t p m w = do
   else if checkForLoss p w m == 4
     then putStrLn "The player walked into a bottomless pit, have a nice eternal fall! Game over."
   else do
-  if t then do
-    if checkForLoss p w m == 1
-      then putStrLn "The Wumpus entered the room with the Player and ate them! Wumpus wins!"
-    else do
-      putStrLn "Player Turn"
-      putStrLn $ "You are in room " ++ show (pLoc p)
-      if wumpusIsAdjacent p m w
-        then putStrLn "A foul stench is in the air..."
-      else return ()
-      if batsAreAdjacent (adjacentRooms (pLoc p) m) m
-        then putStrLn "You hear the sound of wings fluttering nearby..."
-      else return ()
-      if pitIsAdjacent (adjacentRooms (pLoc p) m) m
-        then putStrLn "You feel a cool draft rushing into your room..."
-      else return ()
-      handleMoveOrShoot p m w
-    else do
+    if t then do
       if checkForLoss p w m == 1
-        then putStrLn "The Player entered the room with the Wumpus and was eaten. Wumpus wins!"
+        then putStrLn "The Wumpus entered the room with the Player and ate them! Wumpus wins!"
       else do
-        putStrLn "Wumpus Turn"
-        putStrLn $ "You are in room " ++ show (wLoc w)
-        if playerIsAdjacent (pLoc p) m w
-          then putStrLn "A scent of fear is in the air..."
+        putStrLn "Player Turn"
+        putStrLn $ "You are in room " ++ show (pLoc p)
+        if wumpusIsAdjacent p m w
+          then putStrLn "A foul stench is in the air..."
         else return ()
-        performMoveWumpus p m w
+        if batsAreAdjacent (adjacentRooms (pLoc p) m) m
+          then putStrLn "You hear the sound of wings fluttering nearby..."
+        else return ()
+        if pitIsAdjacent (adjacentRooms (pLoc p) m) m
+          then putStrLn "You feel a cool draft rushing into your room..."
+        else return ()
+        handleMoveOrShoot p m w
+      else do
+        if checkForLoss p w m == 1
+          then putStrLn "The Player entered the room with the Wumpus and was eaten. Wumpus wins!"
+        else do
+          putStrLn "Wumpus Turn"
+          putStrLn $ "You are in room " ++ show (wLoc w)
+          if playerIsAdjacent (pLoc p) m w
+            then putStrLn "A scent of fear is in the air..."
+          else return ()
+          performMoveWumpus p m w
 
 handleMoveOrShoot :: Player -> Map -> Wumpus -> IO()
 handleMoveOrShoot p m w = do
@@ -148,4 +146,4 @@ checkForLoss p w m  | (pLoc p) == (wLoc w)    = 1
                     | (arrows p) == 0         = 2
                     | elem (pLoc p) (bats m)  = 3
                     | elem (pLoc p) (pits m)  = 4
-                    | otherwise = 0
+                    | otherwise               = 0

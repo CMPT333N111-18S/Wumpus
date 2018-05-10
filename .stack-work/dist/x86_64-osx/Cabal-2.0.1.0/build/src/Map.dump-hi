@@ -1,0 +1,1068 @@
+
+==================== FINAL INTERFACE ====================
+2018-05-10 21:46:27.856357 UTC
+
+interface Wumpus-0.1.0.0-D1TacMFmgAYJAYcOJpdZPu:Map 8022
+  interface hash: 90a47082cde5488e524caecf7b981645
+  ABI hash: e653fa8a062c2feb341a696d46cf12e0
+  export-list hash: cf6ab5f18517952763aea6840b829242
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Map.adjacentRooms
+  Map.adjacentRoomsNotPrevious
+  Map.createMap
+  Map.generatePitsAndBats
+  Map.Map{Map.Map bats pits rooms}
+  Map.Room{Map.Room conn number}
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0 deepseq-1.4.3.0
+                      ghc-prim-0.5.1.1 integer-gmp-1.0.1.0 random-1.1 time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:Data.List 4ab7fa2a1b87502b23af891a384f0506
+import  -/  base-4.10.1.0:Data.OldList 555420b092ca8cf0a8f9666bc0e07dcf
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.IO.Unsafe 0aa7e5adc396c9f651baef415ce018da
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO.Unsafe 00b3b8853d06169d9bfd9af46118ba88
+import  -/  random-1.1:System.Random c9dfbade5c0e5bc4ae42c058f948952b
+4d852f77c04045ddef69ec74dae8cd54
+  $tc'Map :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13229909962040172244##
+                   16910394190125770199##
+                   Map.$trModule
+                   Map.$tc'Map2
+                   0#
+                   Map.$tc'Map1) -}
+316124728a90fad3f70ae3056a36bbcc
+  $tc'Map1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+180aaa0d51b6337eca2181e7b28849d6
+  $tc'Map2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Map.$tc'Map3) -}
+6686aec91df6b8835653456d9eedb66b
+  $tc'Map3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Map"#) -}
+8b4b58f8afb426d567bb65a3303ccae8
+  $tc'Room :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12556420981181720327##
+                   10476941250898538662##
+                   Map.$trModule
+                   Map.$tc'Room2
+                   0#
+                   Map.$tc'Room1) -}
+aaf45ab89eb5c4afc47f2911d74a2174
+  $tc'Room1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+796dc7cca77e1b968e9c336070e67944
+  $tc'Room2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Map.$tc'Room3) -}
+be80c84d660a1a74843809cc77cc30fd
+  $tc'Room3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Room"#) -}
+601d2303ec7998e4ff73c4c50baef968
+  $tcMap :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4131965199410630202##
+                   17865301897768573612##
+                   Map.$trModule
+                   Map.$trModule1
+                   0#
+                   GHC.Types.krep$*) -}
+62a313c4d465bdfe1f97c63bfe9390ca
+  $tcRoom :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11399035387583182553##
+                   6089024158836103905##
+                   Map.$trModule
+                   Map.$tcRoom1
+                   0#
+                   GHC.Types.krep$*) -}
+52d6d32b6a295355cbb4b22f4e18352f
+  $tcRoom1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Map.$tcRoom2) -}
+49f40c685280bd25d87ba8b9fba994ac
+  $tcRoom2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Room"#) -}
+2d3e5b17a26182ba1d3f054e6e8a8dc0
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Map.$trModule3 Map.$trModule1) -}
+bda39aaf481ae5fd25cc22fdaffa43d3
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Map.$trModule2) -}
+14cfcf9ace0d316e0b9c24c3fc73cb45
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Map"#) -}
+98d3cbabe319b7778a863513386fa0b9
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Map.$trModule4) -}
+9d41e60a9a6ccf45dfd03dac1826e2e5
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Wumpus-0.1.0.0-D1TacMFmgAYJAYcOJpdZPu"#) -}
+d8fe12565fdec8dd0326311cb4b96d39
+  $wadjacentRoomsNotPrevious ::
+    GHC.Types.Int -> GHC.Prim.Int# -> [Map.Room] -> [GHC.Types.Int]
+  {- Arity: 3, Strictness: <L,U><S,U><S,1*U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Int)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: [Map.Room]) ->
+                 case GHC.List.$w!!
+                        @ Map.Room
+                        ww1
+                        (GHC.Prim.-# ww 1#) of wild { Map.Room ds ds1 ->
+                 Data.OldList.deleteBy @ GHC.Types.Int GHC.Classes.eqInt w ds1 }) -}
+f8a03b34f636d3c13a679d3cc4977712
+  data Map
+    = Map {rooms :: [Map.Room],
+           pits :: [GHC.Types.Int],
+           bats :: [GHC.Types.Int]}
+f83923ed9abec1c045c8f0dfe5cf1dcb
+  data Room = Room {number :: GHC.Types.Int, conn :: [GHC.Types.Int]}
+0158ea3cf30eeb24b6f2baa7be4f95f9
+  adjacentRooms :: GHC.Types.Int -> Map.Map -> [GHC.Types.Int]
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: GHC.Types.Int) (m :: Map.Map) ->
+                 case m of wild { Map.Map ds ds1 ds2 ->
+                 case x of wild1 { GHC.Types.I# x1 ->
+                 case GHC.List.$w!!
+                        @ Map.Room
+                        ds
+                        (GHC.Prim.-# x1 1#) of wild2 { Map.Room ds3 ds4 ->
+                 ds4 } } }) -}
+98564337f55f9c7d42f50d39498b37f7
+  adjacentRoomsNotPrevious ::
+    GHC.Types.Int -> GHC.Types.Int -> Map.Map -> [GHC.Types.Int]
+  {- Arity: 3, Strictness: <L,U><S(S),1*U(U)><S(SLL),1*U(1*U,A,A)>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: GHC.Types.Int) (w2 :: Map.Map) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { Map.Map ww3 ww4 ww5 ->
+                 Map.$wadjacentRoomsNotPrevious w ww1 ww3 } }) -}
+f8a03b34f636d3c13a679d3cc4977712
+  bats :: Map.Map -> [GHC.Types.Int]
+  RecSel Left Map.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Map.Map) ->
+                 case ds of wild { Map.Map ds1 ds2 ds3 -> ds3 }) -}
+f83923ed9abec1c045c8f0dfe5cf1dcb
+  conn :: Map.Room -> [GHC.Types.Int]
+  RecSel Left Map.Room
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Map.Room) ->
+                 case ds of wild { Map.Room ds1 ds2 -> ds2 }) -}
+e69529194d20b892b6d0d72e9909ff1c
+  createMap :: Map.Map -> Map.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ (m :: Map.Map) -> Map.createMap1) -}
+45d7323c7cb803f3bccf3a7cb6b10d2b
+  createMap1 :: Map.Map
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Map
+                   Map.createMap2
+                   (GHC.Types.[] @ GHC.Types.Int)
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+70c5ca4f19b39c2c71b84712044d3b55
+  createMap10 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap81
+                   Map.createMap11) -}
+05bb3da5a3e2ffb64d26b68606b6035b
+  createMap100 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap62
+                   Map.createMap101) -}
+7b2e35d561d6cea02bacdd8c1ef00a6f
+  createMap101 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap56
+                   Map.createMap89) -}
+89904dda861042bc5093d0a5a74e7816
+  createMap102 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap62 Map.createMap103) -}
+acb3f078a88be156c47ee814defb78a2
+  createMap103 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap57
+                   Map.createMap104) -}
+778b0d1f6952550273c27007bead1d53
+  createMap104 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap70
+                   Map.createMap105) -}
+63e50b1471b658f32f7675580fbe9c87
+  createMap105 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap98
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+fbdadb70ce3bd28c049ad422307ad536
+  createMap106 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap70 Map.createMap107) -}
+e006ec2964b3d608c625dca5177c430b
+  createMap107 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap62
+                   Map.createMap108) -}
+97f1626441ab04c0f72f390e4560c935
+  createMap108 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap66
+                   Map.createMap79) -}
+156633bba857cc4725789b34458b80f0
+  createMap109 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap80 Map.createMap110) -}
+353bd96d254691e7c8b6f9080ed37843
+  createMap11 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap76
+                   Map.createMap12) -}
+7f3c1ae475d72d47b3b6775f87c67e56
+  createMap110 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap90
+                   Map.createMap111) -}
+58fa5a63a47d9d62552c2f53bf5086e4
+  createMap111 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap75
+                   Map.createMap112) -}
+332f8710c6d6448498e67104ad0333dc
+  createMap112 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap70
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+fce2024ebf33830740a4ad85a16ac2fc
+  createMap113 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap90 Map.createMap114) -}
+05262745ccc5aedbb84a7acfd858e567
+  createMap114 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap98
+                   Map.createMap115) -}
+a8f19aa354856b45170d5c85a5e08d49
+  createMap115 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap85
+                   Map.createMap79) -}
+e3bffebe3dbcdfaa3b94e9fc00392720
+  createMap12 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap71
+                   Map.createMap13) -}
+8ebc055d45c74b27bc1909c88a782254
+  createMap13 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap67
+                   Map.createMap14) -}
+b0dac65d84d3695e838b0a4668b09ab3
+  createMap14 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap63
+                   Map.createMap15) -}
+f94e21b3e925209ad18a3fccb2920238
+  createMap15 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap58
+                   Map.createMap16) -}
+5360710f87381a31e3377d9c64c11ebd
+  createMap16 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap52
+                   Map.createMap17) -}
+291599b7d7c776686d3b177a95323689
+  createMap17 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap47
+                   Map.createMap18) -}
+57e0ccb2d80ec9b5bc1094cb0aabc447
+  createMap18 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap42
+                   Map.createMap19) -}
+abd44dc492cae36dff206ca73192d5fe
+  createMap19 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap36
+                   Map.createMap20) -}
+6cb5ae05627948e8eff961c9e1f62fd0
+  createMap2 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap113
+                   Map.createMap3) -}
+53c0fec66bff559eb56d38ef6b21f3fc
+  createMap20 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap30
+                   Map.createMap21) -}
+7ad7af6f21a0fc0480816eafdf9660ee
+  createMap21 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap22
+                   (GHC.Types.[] @ Map.Room)) -}
+a062a3598bf7a9382f27b718a21d9712
+  createMap22 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap29 Map.createMap23) -}
+2ea69a680008072589e92f59c51d2692
+  createMap23 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap28
+                   Map.createMap24) -}
+4f6104d8120193fdb8aeaa3122c60ca7
+  createMap24 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap27
+                   Map.createMap25) -}
+2f6b72e1db48947e94914770b196427e
+  createMap25 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap26
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+811169fd96e00ec516c271c3ce2b50dc
+  createMap26 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 13#) -}
+43f2fba3f3d892f9ad29c830d2dde650
+  createMap27 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 19#) -}
+dde823c4efbc7d381bdec65b376c5383
+  createMap28 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 16#) -}
+02e60f595d039b2e111f3736a98f8cc3
+  createMap29 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 20#) -}
+e2acbe05c9670af416a5896c880ff215
+  createMap3 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap109
+                   Map.createMap4) -}
+aa7e6aa067ca91278bc39eb88c78401e
+  createMap30 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap27 Map.createMap31) -}
+aa29bc8354a2a007387b2c76a5a2b81a
+  createMap31 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap35
+                   Map.createMap32) -}
+130dece83d6430d3bf88692c1b1d66a9
+  createMap32 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap29
+                   Map.createMap33) -}
+a80de75df3e32c5653213f40a8e93485
+  createMap33 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap34
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+9ce7ff7aceee64d594a2e59e3a3aad5a
+  createMap34 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+0e222af04fa716094f790da0d8d8bdc2
+  createMap35 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 18#) -}
+d568b04800c9643d2924f61af976f813
+  createMap36 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap35 Map.createMap37) -}
+65d2a72babef8abb15749af5c6bc15ed
+  createMap37 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap41
+                   Map.createMap38) -}
+90bea23e8a03b7b0cf03c986178db5fe
+  createMap38 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap27
+                   Map.createMap39) -}
+dc338a33c9eaa6513ff87a3efc809371
+  createMap39 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap40
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+23e8152cb6e4469c3b4930d3fabaadfa
+  createMap4 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap106
+                   Map.createMap5) -}
+5249ca049bf24aafe1d79effb1f1fd68
+  createMap40 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 17#) -}
+84d91897fbe7d874ccde695609376d43
+  createMap41 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 9#) -}
+1a794907051051a6a57b78723c861a22
+  createMap42 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap40 Map.createMap43) -}
+732af0d52d78e86927e997810ecf41ce
+  createMap43 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap28
+                   Map.createMap44) -}
+96099b0e0be34f63ccd4d4a7b72d05e6
+  createMap44 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap35
+                   Map.createMap45) -}
+d621fab8e54dd0063198491078635a86
+  createMap45 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap46
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+ebc758857a1f735b37c6ad0b14f621b0
+  createMap46 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 7#) -}
+00bc407872e1bf491cc6283270e87109
+  createMap47 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap28 Map.createMap48) -}
+2b74e21ce1690918ca6e49fa857e5552
+  createMap48 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap51
+                   Map.createMap49) -}
+38be53a900af804a9203224e7c79fedc
+  createMap49 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap40
+                   Map.createMap50) -}
+68f8b2ba0df468c74e2be890b18ed205
+  createMap5 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap102
+                   Map.createMap6) -}
+7bbc2fe0ff57ae38edaef983de627e45
+  createMap50 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap29
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+527060aacd137f9237340dc81c271a6e
+  createMap51 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 15#) -}
+ba76e1d5027ce42389c85d5a87f0a3b7
+  createMap52 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap51 Map.createMap53) -}
+c1f642df167454c8827da17f9ee7e181
+  createMap53 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap57
+                   Map.createMap54) -}
+174233c697201faf3e65f1457c2e2991
+  createMap54 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap28
+                   Map.createMap55) -}
+bb62d90005ccbdc8451ec682f22377e6
+  createMap55 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap56
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+332fb2985a5cb421915bc4a27bcc4bde
+  createMap56 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6#) -}
+271d57685a8f476498fb8e5a85dd46d8
+  createMap57 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 14#) -}
+9189f15d47b02adab8afbc8997b6a9f3
+  createMap58 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap57 Map.createMap59) -}
+f9907a4f2f0ee19a147b0f4538913340
+  createMap59 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap51
+                   Map.createMap60) -}
+fcf12cc6931a8b92372801e3229a0c03
+  createMap6 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap99
+                   Map.createMap7) -}
+b16b71b4d564554effa30d2c497e59c8
+  createMap60 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap26
+                   Map.createMap61) -}
+a574780096d9c32d9c84e62f65adb534
+  createMap61 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap62
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+cf9f3a7988db891c1a8d87d3a75c4101
+  createMap62 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+0665618fa9041141c1f58a5367aceef7
+  createMap63 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap26 Map.createMap64) -}
+eefae63020ae82774bb6d6a1d7ce1a70
+  createMap64 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap66
+                   Map.createMap65) -}
+2119ef4a514b746a4db3219010d9e059
+  createMap65 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap57
+                   Map.createMap50) -}
+36d9a38bd6703e7ff7d9905850915b1c
+  createMap66 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 12#) -}
+44a48667f11771909c6a46dfd3507264
+  createMap67 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap66 Map.createMap68) -}
+f562ea595e5747c2268265e7ace17475
+  createMap68 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap70
+                   Map.createMap69) -}
+12a1184f4eff0ef978e0089630c581c5
+  createMap69 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap34
+                   Map.createMap25) -}
+9e5cf427eaf3c9d8a84d7ed5d3794ae1
+  createMap7 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap94
+                   Map.createMap8) -}
+7d968e54eb425e57f1b71c72cb3a8f65
+  createMap70 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+bba5cd93ad29b6be3c499da14d9e9fb4
+  createMap71 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap34 Map.createMap72) -}
+5e96f14c04ddc9ea238f69fe58ff5dd4
+  createMap72 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap75
+                   Map.createMap73) -}
+2d84ab39a9d91828451dcfd733d9a5cd
+  createMap73 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap66
+                   Map.createMap74) -}
+1b3b3b9927c063a6335ee9c9d525283a
+  createMap74 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap27
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+21d08c06dc97d305148500d6910d608f
+  createMap75 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+a6ea02902b30368eb9b0a3f980bb06f1
+  createMap76 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap75 Map.createMap77) -}
+9d19389d2be8d7c2dd88ea3841140a94
+  createMap77 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap41
+                   Map.createMap78) -}
+29c4fdc381ac966cab22f87e498c2ad2
+  createMap78 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap34
+                   Map.createMap79) -}
+3790712ad57c4d6cff9f0a9d60f14cd2
+  createMap79 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap80
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+85a0db5edd6de9ed538f3d64adb6ca9b
+  createMap8 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap91
+                   Map.createMap9) -}
+6eede716b73106bafa6d8158c8a0316e
+  createMap80 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+2f7836a5173dbef7475f2a3ae2c97e8b
+  createMap81 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap41 Map.createMap82) -}
+d260a2f2b9f0eb2479d9dddbef034a66
+  createMap82 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap75
+                   Map.createMap83) -}
+9be5782fc9a283a6794843e832b54710
+  createMap83 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap85
+                   Map.createMap84) -}
+f49bf4487ec87a42ce699c935c3ab756
+  createMap84 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap35
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+f983fa3cb9795e0d1202186e174b03fd
+  createMap85 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
+b4428d4de25d93bf9cfe3ee963aa24fc
+  createMap86 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap85 Map.createMap87) -}
+e229b408be69364e1e399f7d9add662a
+  createMap87 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap46
+                   Map.createMap88) -}
+0bd3e39cf6b7041f4a55a03effb48229
+  createMap88 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap41
+                   Map.createMap89) -}
+1fd7bdc0d4e590aada85414bf7c13ef9
+  createMap89 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap90
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+26c5c7140c54cc7996f066589476e734
+  createMap9 :: [Map.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Map.Room
+                   Map.createMap86
+                   Map.createMap10) -}
+534698f126f8c9d4055d84a0c720abb2
+  createMap90 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+fd47791e948b2c64343fccb007f08478
+  createMap91 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap46 Map.createMap92) -}
+903a89c8467ecbf9343282518ed9fb05
+  createMap92 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap85
+                   Map.createMap93) -}
+2a4334a4c855a648cbe2dc86b7856c29
+  createMap93 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap56
+                   Map.createMap39) -}
+34d029b3b4594983512bec709f9746ba
+  createMap94 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap56 Map.createMap95) -}
+c3c1974d9c221d657c02ee14feb887c9
+  createMap95 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap98
+                   Map.createMap96) -}
+d9cf6aede1d691f5f3d7a0dfef598f6f
+  createMap96 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap46
+                   Map.createMap97) -}
+f2df4c957bf56c3e32e0fa59384aa2be
+  createMap97 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.createMap51
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+c2440fb96363262153612538e85b9cf6
+  createMap98 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+7546ba6a5e1a35d33160faa2bb5d90e2
+  createMap99 :: Map.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Map.Room Map.createMap98 Map.createMap100) -}
+550aa7900268d65c29c7ec35c0f729e6
+  generatePitsAndBats :: Map.Map -> Map.Map
+  {- Arity: 1, Strictness: <L,1*U(1*U,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (m :: Map.Map) ->
+                 Map.Map
+                   (case m of wild { Map.Map ds ds1 ds2 -> ds })
+                   Map.generatePitsAndBats1
+                   Map.generatePitsAndBats1) -}
+b0da8cee4492c9c649904625d91fd355
+  generatePitsAndBats1 :: [GHC.Types.Int]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.generatePitsAndBats10
+                   Map.generatePitsAndBats2) -}
+a2839019f59d462967dc49fe9c85cef0
+  generatePitsAndBats10 :: GHC.Types.Int
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+                        Map.generatePitsAndBats11 of ds { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+2159fd8ae75c589a90fd247bf5e47246
+  generatePitsAndBats11 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+  {- Arity: 1, Strictness: <S,U>m,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.noDuplicate#
+                        @ GHC.Prim.RealWorld
+                        s of s' { DEFAULT ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <System.Random.StdGen>_N) of wild { GHC.STRef.STRef r# ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        @ (System.Random.StdGen, GHC.Types.Int)
+                        @ GHC.Types.Int
+                        r#
+                        Map.generatePitsAndBats12
+                        s' of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of b1 { GHC.Types.I# ipv2 -> ds1 } } } }) -}
+339ad71dc112bb4ad09df6360f9d5914
+  generatePitsAndBats12 ::
+    System.Random.StdGen -> (System.Random.StdGen, GHC.Types.Int)
+  {- Arity: 1, Strictness: <L,U>m,
+     Unfolding: (\ (a1 :: System.Random.StdGen) ->
+                 case System.Random.$wrandomIvalInteger
+                        @ System.Random.StdGen
+                        @ GHC.Types.Int
+                        System.Random.$fRandomGenStdGen
+                        GHC.Num.$fNumInt
+                        Map.generatePitsAndBats_w7
+                        Map.generatePitsAndBats_w6
+                        a1 of ww2 { (#,#) ww3 ww4 ->
+                 case ww4 of a'1 { System.Random.StdGen ipv ipv1 ->
+                 (a'1, ww3) } }) -}
+6d89bd9f8d7fe1e9907fddd93c99c7f9
+  generatePitsAndBats2 :: [GHC.Types.Int]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.generatePitsAndBats7
+                   Map.generatePitsAndBats3) -}
+152b67c51bdde681c9b25e0eee78fb6a
+  generatePitsAndBats3 :: [GHC.Types.Int]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Map.generatePitsAndBats4
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+354814f02517ac5a43557b8d025c7bd6
+  generatePitsAndBats4 :: GHC.Types.Int
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+                        Map.generatePitsAndBats5 of ds { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+4360b8ea21f55c44a4afd3ab20aa4954
+  generatePitsAndBats5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+  {- Arity: 1, Strictness: <S,U>m,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.noDuplicate#
+                        @ GHC.Prim.RealWorld
+                        s of s' { DEFAULT ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <System.Random.StdGen>_N) of wild { GHC.STRef.STRef r# ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        @ (System.Random.StdGen, GHC.Types.Int)
+                        @ GHC.Types.Int
+                        r#
+                        Map.generatePitsAndBats6
+                        s' of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of b1 { GHC.Types.I# ipv2 -> ds1 } } } }) -}
+d965ca4577715702226ec7cff04d9e6f
+  generatePitsAndBats6 ::
+    System.Random.StdGen -> (System.Random.StdGen, GHC.Types.Int)
+  {- Arity: 1, Strictness: <L,U>m,
+     Unfolding: (\ (a1 :: System.Random.StdGen) ->
+                 case System.Random.$wrandomIvalInteger
+                        @ System.Random.StdGen
+                        @ GHC.Types.Int
+                        System.Random.$fRandomGenStdGen
+                        GHC.Num.$fNumInt
+                        Map.generatePitsAndBats_w2
+                        Map.generatePitsAndBats_w1
+                        a1 of ww2 { (#,#) ww3 ww4 ->
+                 case ww4 of a'1 { System.Random.StdGen ipv ipv1 ->
+                 (a'1, ww3) } }) -}
+98251e424c685ef559404c77816b8b5f
+  generatePitsAndBats7 :: GHC.Types.Int
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+                        Map.generatePitsAndBats8 of ds { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+90ed8d11d4ce8b467c0ff433bddd4d14
+  generatePitsAndBats8 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+  {- Arity: 1, Strictness: <S,U>m,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.noDuplicate#
+                        @ GHC.Prim.RealWorld
+                        s of s' { DEFAULT ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <System.Random.StdGen>_N) of wild { GHC.STRef.STRef r# ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        @ (System.Random.StdGen, GHC.Types.Int)
+                        @ GHC.Types.Int
+                        r#
+                        Map.generatePitsAndBats9
+                        s' of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of b1 { GHC.Types.I# ipv2 -> ds1 } } } }) -}
+0d845f0f1837b764fde0fbae97d30e78
+  generatePitsAndBats9 ::
+    System.Random.StdGen -> (System.Random.StdGen, GHC.Types.Int)
+  {- Arity: 1, Strictness: <L,U>m,
+     Unfolding: (\ (a1 :: System.Random.StdGen) ->
+                 case System.Random.$wrandomIvalInteger
+                        @ System.Random.StdGen
+                        @ GHC.Types.Int
+                        System.Random.$fRandomGenStdGen
+                        GHC.Num.$fNumInt
+                        Map.generatePitsAndBats_w5
+                        Map.generatePitsAndBats_w4
+                        a1 of ww2 { (#,#) ww3 ww4 ->
+                 case ww4 of a'1 { System.Random.StdGen ipv ipv1 ->
+                 (a'1, ww3) } }) -}
+f1a1f8384599ab878121079e3ed9db44
+  generatePitsAndBats_w1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (20) -}
+d1eac6768d1a81ba74c275dcc4731c91
+  generatePitsAndBats_w2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (15) -}
+93842916fd57276588045e8d46b6c6e7
+  generatePitsAndBats_w4 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (14) -}
+52fb1f1b29de91c5a7fa948618f82c86
+  generatePitsAndBats_w5 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (8) -}
+f486994bd54e30970efd0fa1300efba7
+  generatePitsAndBats_w6 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (7) -}
+884ba995117d68fa3c2adb99aeae8ef9
+  generatePitsAndBats_w7 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+f83923ed9abec1c045c8f0dfe5cf1dcb
+  number :: Map.Room -> GHC.Types.Int
+  RecSel Left Map.Room
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Map.Room) ->
+                 case ds of wild { Map.Room ds1 ds2 -> ds1 }) -}
+f8a03b34f636d3c13a679d3cc4977712
+  pits :: Map.Map -> [GHC.Types.Int]
+  RecSel Left Map.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Map.Map) ->
+                 case ds of wild { Map.Map ds1 ds2 ds3 -> ds2 }) -}
+f8a03b34f636d3c13a679d3cc4977712
+  rooms :: Map.Map -> [Map.Room]
+  RecSel Left Map.Map
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Map.Map) ->
+                 case ds of wild { Map.Map ds1 ds2 ds3 -> ds1 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

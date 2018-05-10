@@ -1,0 +1,210 @@
+
+==================== FINAL INTERFACE ====================
+2018-05-10 21:46:28.251556 UTC
+
+interface Wumpus-0.1.0.0-D1TacMFmgAYJAYcOJpdZPu:Player 8022
+  interface hash: a71d54389304d619106193dc9dc6a678
+  ABI hash: a4b962f95ab212c00e834f5e8fe87da7
+  export-list hash: 599249e95f2df27ec64c41dfc0a6b06a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Player.batsAreAdjacent
+  Player.pMove
+  Player.pitIsAdjacent
+  Player.shootArrow
+  Player.wumpusIsAdjacent
+  Player.Player{Player.Player arrows pLoc prevPLoc}
+module dependencies: Map Wumpus
+package dependencies: array-0.5.2.0 base-4.10.1.0 deepseq-1.4.3.0
+                      ghc-prim-0.5.1.1 integer-gmp-1.0.1.0 random-1.1 time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  Map e653fa8a062c2feb341a696d46cf12e0
+  exports: cf6ab5f18517952763aea6840b829242
+  Map f8a03b34f636d3c13a679d3cc4977712
+  adjacentRooms 0158ea3cf30eeb24b6f2baa7be4f95f9
+  bats f8a03b34f636d3c13a679d3cc4977712
+  pits f8a03b34f636d3c13a679d3cc4977712
+import  -/  Wumpus 0a63c172512870b919215774438417ef
+  exports: 7d1ba74d8180db523b681d282940ae05
+  Wumpus 5af9aa1bde9e15e113de3baff7896b4c
+  wLoc 5af9aa1bde9e15e113de3baff7896b4c
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO 525805ab19df5e4fe6d8de7dde9cb909
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+b50b041dd6411b1791145f7397531411
+  $tc'Player :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16407536541758762124##
+                   14694078537744461540##
+                   Player.$trModule
+                   Player.$tc'Player2
+                   0#
+                   Player.$tc'Player1) -}
+e0c7df6a69b3f9c5bfc508b659cf0d58
+  $tc'Player1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+a12ada7464af6af7857d21a3184019e7
+  $tc'Player2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Player.$tc'Player3) -}
+0c805c52b8ad13c4b6fe8776bcc39007
+  $tc'Player3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Player"#) -}
+82ce12344e662c5b5ab74367e53f66d1
+  $tcPlayer :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11668465243845192816##
+                   2459493767069956995##
+                   Player.$trModule
+                   Player.$trModule1
+                   0#
+                   GHC.Types.krep$*) -}
+6ada7dbf4865fb8af7e032d72298a13f
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Player.$trModule3
+                   Player.$trModule1) -}
+32f53cd505aef9c3749520c96abdf4b9
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Player.$trModule2) -}
+51804b0bfa1fd8a492c362001c86e5ab
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Player"#) -}
+23033b3767d6d77c942ec1d21a1cb67c
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Player.$trModule4) -}
+d898ec6b34260972836fffbb8e46e899
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Wumpus-0.1.0.0-D1TacMFmgAYJAYcOJpdZPu"#) -}
+00499eea6fec42239603f4474eeee828
+  $wbatsAreAdjacent ::
+    [GHC.Types.Int] -> [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
+328e220a01758c172230ccc457b52713
+  $wpitIsAdjacent ::
+    [GHC.Types.Int] -> [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
+3d142473e37cac0c0a590ca8d457e958
+  $wwumpusIsAdjacent ::
+    GHC.Prim.Int# -> [Map.Room] -> Wumpus.Wumpus -> GHC.Types.Bool
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,1*U(1*U,A)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: [Map.Room])
+                   (w :: Wumpus.Wumpus) ->
+                 case GHC.List.$w!!
+                        @ Map.Room
+                        ww1
+                        (GHC.Prim.-# ww 1#) of wild2 { Map.Room ds3 ds4 ->
+                 GHC.List.elem
+                   @ GHC.Types.Int
+                   GHC.Classes.$fEqInt
+                   (case w of wild { Wumpus.Wumpus ds1 ds2 -> ds1 })
+                   ds4 }) -}
+39047579bbc7269ac84c031eaf7d929a
+  data Player
+    = Player {pLoc :: GHC.Types.Int,
+              prevPLoc :: GHC.Types.Int,
+              arrows :: GHC.Types.Int}
+39047579bbc7269ac84c031eaf7d929a
+  arrows :: Player.Player -> GHC.Types.Int
+  RecSel Left Player.Player
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Player.Player) ->
+                 case ds of wild { Player.Player ds1 ds2 ds3 -> ds3 }) -}
+063d0de458c7b53307190fc7c84adf5a
+  batsAreAdjacent :: [GHC.Types.Int] -> Map.Map -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S(LLS),1*U(A,A,U)>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: [GHC.Types.Int]) (w1 :: Map.Map) ->
+                 case w1 of ww { Map.Map ww1 ww2 ww3 ->
+                 Player.$wbatsAreAdjacent w ww3 }) -}
+39047579bbc7269ac84c031eaf7d929a
+  pLoc :: Player.Player -> GHC.Types.Int
+  RecSel Left Player.Player
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Player.Player) ->
+                 case ds of wild { Player.Player ds1 ds2 ds3 -> ds1 }) -}
+e59902898f65c9025b0daa4937ebdb7f
+  pMove :: GHC.Types.Int -> Player.Player -> Player.Player
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U(1*U,A,1*U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: GHC.Types.Int) (p :: Player.Player) ->
+                 Player.Player
+                   x
+                   (case p of wild { Player.Player ds ds1 ds2 -> ds })
+                   (case p of wild { Player.Player ds ds1 ds2 -> ds2 })) -}
+0e316a84b24ca6a88e7b35479e447ad2
+  pitIsAdjacent :: [GHC.Types.Int] -> Map.Map -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S(LSL),1*U(A,U,A)>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: [GHC.Types.Int]) (w1 :: Map.Map) ->
+                 case w1 of ww { Map.Map ww1 ww2 ww3 ->
+                 Player.$wpitIsAdjacent w ww2 }) -}
+39047579bbc7269ac84c031eaf7d929a
+  prevPLoc :: Player.Player -> GHC.Types.Int
+  RecSel Left Player.Player
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Player.Player) ->
+                 case ds of wild { Player.Player ds1 ds2 ds3 -> ds2 }) -}
+28c8b85a73a81673ab120ed8e85b9151
+  shootArrow :: Player.Player -> Player.Player
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(1*U,1*U,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (p :: Player.Player) ->
+                 Player.Player
+                   (case p of wild { Player.Player ds ds1 ds2 -> ds })
+                   (case p of wild { Player.Player ds ds1 ds2 -> ds1 })
+                   (case p of wild { Player.Player ds ds1 ds2 ->
+                    case ds2 of wild1 { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.-# x 1#) } })) -}
+963e1aaa1810719fbaedd3c45c826c62
+  wumpusIsAdjacent ::
+    Player.Player -> Map.Map -> Wumpus.Wumpus -> GHC.Types.Bool
+  {- Arity: 3,
+     Strictness: <S(S(S)LL),1*U(1*U(U),A,A)><S(SLL),1*U(1*U,A,A)><L,1*U(1*U,A)>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Player.Player) (w1 :: Map.Map) (w2 :: Wumpus.Wumpus) ->
+                 case w of ww { Player.Player ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.I# ww5 ->
+                 case w1 of ww6 { Map.Map ww7 ww8 ww9 ->
+                 Player.$wwumpusIsAdjacent ww5 ww7 w2 } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

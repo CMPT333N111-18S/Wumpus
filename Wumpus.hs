@@ -8,5 +8,5 @@ data Wumpus = Wumpus { wLoc :: Int, prevWLoc :: Int}
 wMove :: Int -> Wumpus -> Wumpus
 wMove x w = Wumpus (x) (wLoc w)
 
---wumpusIsAdjacent :: Player -> Map -> Wumpus -> Bool
---wumpusIsAdjacent p m w = elem (location w) (adjacentRooms p m)
+playerIsAdjacent :: Int -> Map -> Wumpus -> Bool
+playerIsAdjacent p m w = elem p $ adjacentRooms (wLoc w) m
